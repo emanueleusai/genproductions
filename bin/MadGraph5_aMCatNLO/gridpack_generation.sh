@@ -224,7 +224,7 @@ if [ ! -d ${AFS_GEN_FOLDER}/${name}_gridpack ]; then
 #   echo "set ninja $PWD/HEPTools/lib" >> mgconfigscript
 
   if [ "$queue" == "local" ]; then
-      echo "set run_mode 2" >> mgconfigscript
+      echo "set run_mode 4" >> mgconfigscript
   else
       #suppress lsf emails
       export LSB_JOB_REPORT_MAIL="N"
