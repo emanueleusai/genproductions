@@ -63,3 +63,7 @@ for setup in MASSES:
         with open("{0}/{0}_customizecards.dat".format(sampleName), "w") as f:
             f.write("set param_card mass 6000047 %d\n" % mass)
             f.write("set param_card decay 6000047 %.2f" % (mass * width))
+
+        with open("{0}/{0}_proc_card.dat".format(sampleName), "a") as f:
+            f.write("output {0} -nojpeg\n".format(sampleName))
+
