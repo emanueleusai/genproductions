@@ -61,6 +61,7 @@ for setup in MASSES:
 
         # Overwrite customizecards with correct mass and width
         with open("{0}/{0}_customizecards.dat".format(sampleName), "w") as f:
+            f.write("set param_card CKMBLOCK 1 0.0\n")
             f.write("set param_card mass 6000047 %d\n" % mass)
             f.write("set param_card decay 6000047 %.2f" % (mass * width))
 
